@@ -1,0 +1,26 @@
+parameters:
+
+    # The level 9 is the highest level
+    level: 8
+
+    reportMaybesInPropertyPhpDocTypes: false
+    checkMissingIterableValueType: false
+    checkOctaneCompatibility: false
+
+    paths:
+        - app
+
+    excludePaths:
+#        - app/Nova/*
+#        - app/Http/Livewire/*
+
+    ignoreErrors:
+        - '#is not allowed to extend.#'
+        - '#Short ternary operator is not allowed. Use null coalesce operator if applicable or consider using long ternary.#'
+#        - '#Dynamic call to static method.#'
+#        - '#has a nullable return type declaration.#'
+#        - '#has parameter \$[a-zA-Z]+ with default value.#'
+#        - '#has parameter \$[a-zA-Z]+ with null as default value.#'
+#        - '#has parameter \$[a-zA-Z]+ with a nullable type declaration.#'
+#        - '#Parameter \#[0-9] \$column of method Illuminate\\Database\\Eloquent\\Builder\<Illuminate\\Database\\Eloquent\\Model\>\:\:whereIn\(\) expects string, Illuminate\\Database\\Query\\Expression given.#'
+#        - '#is protected, but since the containing class is final, it can be private.#'

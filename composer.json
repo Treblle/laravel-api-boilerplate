@@ -5,7 +5,7 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "fruitcake/laravel-cors": "^2.0.5",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.0",
@@ -38,19 +38,23 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
+        "post-update-cmd": "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+        "post-root-package-install": "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+        "post-create-project-cmd": "@php artisan key:generate --ansi",
+        "models": "@php artisan ide-helper:models --write",
+        "analyse": "./vendor/bin/phpstan analyse --memory-limit=2G",
+        "refactor": "./vendor/bin/rector process",
+        "format": "./vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "test": "./vendor/bin/pest",
+        "test:fast": "./vendor/bin/pest --parallel",
+        "test:coverage": "./vendor/bin/pest --coverage --min=100 --coverage-html=.coverage --coverage-clover=coverage.xml",
+        "test:mutation": "XDEBUG_MODE=coverage ./vendor/bin/infection --test-framework=pest --show-mutations"
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/dusk"
+            ]
         }
     },
     "config": {
