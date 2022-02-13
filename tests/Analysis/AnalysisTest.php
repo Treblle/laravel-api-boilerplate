@@ -7,6 +7,9 @@ namespace Tests\Analysis;
 use GrahamCampbell\Analyzer\AnalysisTrait;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 final class AnalysisTest extends TestCase
 {
     use AnalysisTrait;

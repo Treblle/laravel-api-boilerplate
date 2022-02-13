@@ -12,7 +12,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $dir = getcwd();
 
     $parameters = $containerConfigurator->parameters();
-    $services = $containerConfigurator->services();
+    $services   = $containerConfigurator->services();
 
     $parameters->set(Option::BOOTSTRAP_FILES, [
         $dir.'/rector-bootstrap.php',
