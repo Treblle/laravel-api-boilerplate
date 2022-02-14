@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use App\Enums\Version;
+use App\Models\User;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Tests\TestCase;
+use Laravel\Sanctum\Sanctum;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +18,30 @@ use Tests\TestCase;
 |
 */
 
-function actingAs(Authenticatable $user): TestCase
+function actingAs(Authenticatable|null $user = null, array $abilities = ['*'])
 {
-    return test()->actingAs($user);
+    if ($user === null) {
+        $user = User::factory()->create();
+    }
+
+    Sanctum::actingAs($user, $abilities);
+
+    return test();
 }
 
 function logout(): void
 {
     auth()->logout();
+}
+
+function routeVersioned(string $name, array $attributes = [], Version|string $version = 'v1.0'): string
+{
+    if (is_a($version, Version::class)) {
+        $version = $version->value;
+    }
+
+    return url('api', [
+        'version' => $version,
+        'name'    => $name,
+    ] + $attributes);
 }
