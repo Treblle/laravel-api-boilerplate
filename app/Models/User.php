@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Models\Concerns\InteractsWithUuid;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -44,11 +45,14 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @method static Builder|User findByUuid(string $uuid)
+ * @method static Builder|User findOrFailByUuid(string $uuid)
  */
 final class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
+    use InteractsWithUuid;
     use Notifiable;
 
     /**

@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\Users\UsersDestroyController;
+use App\Http\Controllers\Api\Users\UsersIndexController;
+use App\Http\Controllers\Api\Users\UsersShowController;
+use App\Http\Controllers\Api\Users\UsersUpdateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +19,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=2628000;etag'])->group(function () {
+    Route::prefix('users')->group(function () {
+        Route::get('/', UsersIndexController::class)->name('users.index');
+        Route::get('/{user}', UsersShowController::class)->name('users.show');
+        Route::match(['put', 'patch'], '/{user}', UsersUpdateController::class)->name('users.update');
+        Route::delete('/{user}', UsersDestroyController::class)->name('users.destroy');
+    });
+
+//    Route::prefix('posts')->group(function () {
+//        Route::get('/', PostsIndexController::class)->name('posts.index');
+//        Route::post('/', PostsStoreController::class)->name('posts.store');
+//        Route::get('/{post}', PostsShowController::class)->name('posts.show');
+//        Route::match(['put', 'patch'], '/{post}', PostsUpdateController::class)->name('posts.update');
+//        Route::delete('/{post}', PostsDestroyController::class)->name('posts.destroy');
+//    });
 });
