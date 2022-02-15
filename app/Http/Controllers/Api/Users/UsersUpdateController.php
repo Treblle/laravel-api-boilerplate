@@ -12,7 +12,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class UsersUpdateController extends Controller
+final class UsersUpdateController extends Controller
 {
     public function __invoke(UserRequest $request, Version $version, User $user): JsonResource
     {

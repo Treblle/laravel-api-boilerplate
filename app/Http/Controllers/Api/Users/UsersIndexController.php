@@ -12,7 +12,7 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class UsersIndexController extends Controller
+final class UsersIndexController extends Controller
 {
     public function __invoke(Request $request, Version $version): AnonymousResourceCollection
     {
