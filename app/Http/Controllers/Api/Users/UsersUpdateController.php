@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Api\Users;
 
 use App\Enums\Version;
-use App\Http\Requests\v1_0\UserRequest;
+use App\Http\Requests\Api\v1_0\UserRequest;
 use App\Http\Resources\v1_0\UserResource;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\JsonResource;
