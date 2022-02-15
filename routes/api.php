@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=2628000;etag'])->group(function () {
+Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=2628000;etag', 'treblle'])->group(function () {
     Route::prefix('users')->group(function () {
         Route::get('/', UsersIndexController::class)->name('users.index');
         Route::get('/{user}', UsersShowController::class)->name('users.show');
