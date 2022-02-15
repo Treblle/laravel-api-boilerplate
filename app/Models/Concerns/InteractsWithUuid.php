@@ -23,12 +23,16 @@ trait InteractsWithUuid
         return 'uuid';
     }
 
+    /**
+     * @param Builder<Model> $query
+     */
     public function scopeFindByUuid(Builder $query, string $uuid): Model|null
     {
         return $query->where('uuid', $uuid)->first();
     }
 
     /**
+     * @param Builder<Model> $query
      * @throws ModelNotFoundException
      */
     public function scopeFindOrFailByUuid(Builder $query, string $uuid): Model

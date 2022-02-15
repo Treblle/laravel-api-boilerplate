@@ -21,6 +21,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * App\Models\User.
  *
  * @property int $id
+ * @property string $uuid
  * @property string $name
  * @property string $email
  * @property Carbon|null $email_verified_at
@@ -33,6 +34,8 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @property-read Collection|PersonalAccessToken[] $tokens
  * @property-read int|null $tokens_count
  * @method static UserFactory factory(...$parameters)
+ * @method static Builder|User findByUuid(string $uuid)
+ * @method static Builder|User findOrFailByUuid(string $uuid)
  * @method static Builder|User newModelQuery()
  * @method static Builder|User newQuery()
  * @method static Builder|User query()
@@ -45,8 +48,6 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
- * @method static Builder|User findByUuid(string $uuid)
- * @method static Builder|User findOrFailByUuid(string $uuid)
  */
 final class User extends Authenticatable
 {
