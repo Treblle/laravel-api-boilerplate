@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use App\Models\Concerns\InteractsWithUuid;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+final class {{ class }} extends Model
+{
+    use HasFactory;
+    use InteractsWithUuid;
+}
