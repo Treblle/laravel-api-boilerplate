@@ -131,7 +131,7 @@ final class MakeCommand extends Command
 
         try {
             $reflector = new ReflectionClass($model);
-            $filename = $reflector->getFileName();
+            $filename  = $reflector->getFileName();
         } catch (ReflectionException) {
             return null;
         }
