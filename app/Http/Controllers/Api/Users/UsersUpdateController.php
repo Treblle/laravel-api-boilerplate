@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers\Api\Users;
 
 use App\Enums\Version;
-use App\Http\Requests\Api\v1_0\UserRequest;
+use App\Http\Requests\Api\v1_0\UserUpdateRequest;
 use App\Http\Resources\v1_0\UserResource;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class UsersUpdateController extends Controller
 {
-    public function __invoke(UserRequest $request, Version $version, User $user): JsonResource
+    public function __invoke(UserUpdateRequest $request, Version $version, User $user): JsonResource
     {
         abort_unless(
             $version->greaterThanOrEqualsTo(Version::v1_0),
