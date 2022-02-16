@@ -9,6 +9,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -48,6 +49,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereRememberToken($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @method static Builder|User whereUuid($value)
+ * @property-read Collection|Post[] $posts
+ * @property-read int|null $posts_count
  */
 final class User extends Authenticatable
 {
@@ -85,4 +89,12 @@ final class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * @return HasMany<Post>
+     */
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
+    }
 }

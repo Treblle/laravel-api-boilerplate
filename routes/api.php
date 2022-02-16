@@ -2,6 +2,11 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\Api\Posts\PostsDestroyController;
+use App\Http\Controllers\Api\Posts\PostsIndexController;
+use App\Http\Controllers\Api\Posts\PostsShowController;
+use App\Http\Controllers\Api\Posts\PostsStoreController;
+use App\Http\Controllers\Api\Posts\PostsUpdateController;
 use App\Http\Controllers\Api\Users\UsersDestroyController;
 use App\Http\Controllers\Api\Users\UsersIndexController;
 use App\Http\Controllers\Api\Users\UsersShowController;
@@ -27,11 +32,11 @@ Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=2628000;etag', 
         Route::delete('/{user}', UsersDestroyController::class)->name('users.destroy');
     });
 
-//    Route::prefix('posts')->group(function () {
-//        Route::get('/', PostsIndexController::class)->name('posts.index');
-//        Route::post('/', PostsStoreController::class)->name('posts.store');
-//        Route::get('/{post}', PostsShowController::class)->name('posts.show');
-//        Route::match(['put', 'patch'], '/{post}', PostsUpdateController::class)->name('posts.update');
-//        Route::delete('/{post}', PostsDestroyController::class)->name('posts.destroy');
-//    });
+    Route::prefix('posts')->group(function () {
+        Route::get('/', PostsIndexController::class)->name('posts.index');
+        Route::post('/', PostsStoreController::class)->name('posts.store');
+        Route::get('/{post}', PostsShowController::class)->name('posts.show');
+        Route::match(['put', 'patch'], '/{post}', PostsUpdateController::class)->name('posts.update');
+        Route::delete('/{post}', PostsDestroyController::class)->name('posts.destroy');
+    });
 });
