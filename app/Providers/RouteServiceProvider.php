@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Http\Controllers\AuthTokenController;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -32,6 +33,11 @@ final class RouteServiceProvider extends ServiceProvider
             Route::prefix('api/{version}')
                 ->middleware('api')
                 ->group(base_path('routes/api.php'));
+
+            Route::prefix('api')
+                ->middleware(['api', 'treblle'])
+                ->post('auth/token', AuthTokenController::class)
+                ->name('api.auth.token');
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));

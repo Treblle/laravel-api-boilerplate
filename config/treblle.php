@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     /*
      * A valid Treblle API key. You can get started for FREE by visiting https://treblle.com/
