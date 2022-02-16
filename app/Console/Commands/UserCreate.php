@@ -7,6 +7,7 @@ namespace App\Console\Commands;
 use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 final class UserCreate extends Command
@@ -41,7 +42,9 @@ final class UserCreate extends Command
         }
 
         $data = $validator->validated();
-        User::create($data);
+        User::create(array_merge($data, [
+            'password' => Hash::make($data['password']),
+        ]));
 
         $this->info(trans('artisan.create_user.alerts.confirmation'));
         $this->newLine();
