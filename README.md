@@ -31,10 +31,10 @@ An awesome boilerplate for your next Laravel 9 based API. It's only goal is to s
 <dd>Want to use UUIDs but find it to much work just use our built in `InteractsWithUuid` trait and have fun with UUIDs</dd>
 
 <dt>Spawn a new user quickly</dt>
-<dd>Easily create a new user without messing around with database clients or CRUD systems by using our custom command `bash php artisan user:create`</dd>
+<dd>Easily create a new user without messing around with database clients or CRUD systems by using our custom command `php artisan user:create`</dd>
 
 <dt>Treblle included</dt>
-<dd>We added an awesome Laravel package called Treblle. Out of the box Treblle gives you: real-time API monitoring, automatically generated and updated documentation, error tracking and logging, API analytics, quality scoring and much more. To get started with Treblle just run `bash php artisan treblle:start` and follow the instructions or visit [https://treblle.com](https://treblle.com) for more information</dd>
+<dd>We added an awesome Laravel package called Treblle. Out of the box Treblle gives you: real-time API monitoring, automatically generated and updated documentation, error tracking and logging, API analytics, quality scoring and much more. To get started with Treblle just run `php artisan treblle:start` and follow the instructions or visit [treblle.com](https://treblle.com) for more information</dd>
 </dl>
 
 ## Requirements
@@ -51,7 +51,7 @@ An awesome boilerplate for your next Laravel 9 based API. It's only goal is to s
 
 ## Getting started
 
-Press the button `Use this template` at the top of this repository to create a new API with this boilerplate and 🎉.
+Press the `Use this template` button at the top of this repository to create a new API with this boilerplate and 🎉.
 
 ## Thank you
 
