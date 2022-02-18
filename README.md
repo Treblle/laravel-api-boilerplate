@@ -1,15 +1,41 @@
-# Laravel API boilerplate
+<img src="https://treblle-assets.s3.amazonaws.com/laravel-api-boilerplate.png" alt="Laravel API Boilerplate" align="center">
 
-A Laravel template for building your next API project. 
-This boilerplate offers a good starting point to build robust APIs with the latest technologies and best practices! 
+# Laravel API boilerplate 🚀
 
-Out-of-the-box includes:
-- versioning system
-- restful JSON
-- Sanctum Authentication
-- custom Artisan commands
-- example endpoints
-- ready for Treblle
+An awesome boilerplate for your next Laravel 9 based API. It's only goal is to simply **kick-start your API development** and provide you with some of the best practices when building amazing and scalable REST APIs 🔥
+
+## Features
+<dl>
+<dt>REST API Best Practices</dt>
+<dd>We baked in all the best REST API practices in terms of structuring your API, naming conversations, HTTP methods, responses and optimizations</dd>
+	
+<dt>Concrete examples</dt>
+<dd>We all like to learn by examples and that's why  the boilerplate comes with a concrete example that include everything from folder structure, routes to naming controllers</dd>
+
+<dt>Scaffolding Artisan command</dt>
+<dd>Tired of manually creating controllers, resources, test and form requests each time for new API endpoints. We were too. That's why we added a command that does all of that for you. Just run `php artisan treblle:make` and you get everything you need in a second</dd>
+
+<dt>Built-in versioning</dt>
+<dd>Building a versioning system that scales is always hard and that's why we built in a robust versioning system that is easy to use and can grow with the project</dd>
+
+<dt>Single responsibility controllers</dt>
+<dd>The boilerplate uses single responsibility controllers that make it painfully obvious what's going on and can be used with different versions</dd>
+
+<dt>Models, migrations and factories</dt>
+<dd>We built two tables Users and Posts and defined everything you might need on a database and model level</dd>
+
+<dt>Sanctum authentication</dt>
+<dd>Built in Laravel Sanctum authentication included in the boilerplate.</dd>
+
+<dt>Magical UUID trait</dt>
+<dd>Want to use UUIDs but find it to much work just use our built in `InteractsWithUuid` trait and have fun with UUIDs</dd>
+
+<dt>Spawn a new user quickly</dt>
+<dd>Easily create a new user without messing around with database clients or CRUD systems by using our custom command `bash php artisan user:create`</dd>
+
+<dt>Treblle included</dt>
+<dd>We added an awesome Laravel package called Treblle. Out of the box Treblle gives you: real-time API monitoring, automatically generated and updated documentation, error tracking and logging, API analytics, quality scoring and much more. To get started with Treblle just run `bash php artisan treblle:start` and follow the instructions or visit [https://treblle.com](https://treblle.com) for more information</dd>
+</dl>
 
 ## Requirements
 * PHP 8.1+
@@ -23,45 +49,18 @@ Out-of-the-box includes:
 - [laravel/sanctum](https://github.com/laravel/sanctum)
 - [treblle/treblle-laravel](https://github.com/treblle/treblle-laravel)
 
-## Installation
+## Getting started
 
-Press the button `Use this template` at the top of this repository to create a new one with the content of this boilerplate and... happy coding 🎉.
+Press the button `Use this template` at the top of this repository to create a new API with this boilerplate and 🎉.
 
-## Getting Started
+## Thank you
 
-You need to get "API KEY" and "Project ID" by logging in to your Treblle account or creating a FREE one on [Treblle website](https://treblle.com/register) or by using the command line. 
+The boilerplate was built by [Maurizio](https://github.com/leMaur), with some help from [cindreta](https://github.com/cindreta) and sponsored by [Treblle](https://treblle.com). We would love to have you as our contributor so please feel free to make pull requests and help us make the best API boilerplate on Github 💪🏻
 
-```bash
-php artisan treblle:start
-```
+## The 10 REST Commandments E-book
 
-when you have your "API KEY" and "Project ID", you need to add them to your `.env` file 
+![# The 10 REST Commandments](https://treblle-assets.s3.amazonaws.com/api-book.jpg)Grab a free copy of The 10 REST Commandments e-book and learn how to build great REST APIs that scale in any language 👉 [https://treblle.com/ebooks/the-10-rest-commandments](https://treblle.com/ebooks/the-10-rest-commandments) 
 
-```bash
-TREBLLE_API_KEY=YOUR_API_KEY
-TREBLLE_PROJECT_ID=YOUR_PROJECT_ID
-```
-
-For more configuration options, refer to [Treblle documentation](https://github.com/Treblle/treblle-laravel#configuration-options).
-
-## Custom Artisan Commands
-
-Create new user
-```bash
-php artisan user:create
-```
-  
-Scaffold controllers, requests, resource and tests for the given resource (remember to create Model up-front) 
-```bash
-php artisan treblle:make
-```
-
-## Suggestions
-
-We suggest taking a look to these packages if you need more complex APIs:
-- [Laravel Passport](https://github.com/laravel/passport)
-- [Spatie Query Builder](https://github.com/spatie/laravel-query-builder)
-- [Laravel Orion](https://tailflow.github.io/laravel-orion-docs/)
 
 ## Support
 
@@ -70,5 +69,5 @@ do our best to help you out.
 
 ## License
 
-Copyright 2021, Treblle Limited. Licensed under the MIT license:
+Copyright 2022, Treblle Limited. Licensed under the MIT license:
 http://www.opensource.org/licenses/mit-license.php
