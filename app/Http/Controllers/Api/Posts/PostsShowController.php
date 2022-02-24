@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Api\Posts;
 
-use App\Enums\Version;
-use App\Http\Resources\v1_0\PostResource;
-use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use App\Enums\Version;
+use App\Http\Resources\v1_0\PostResource;
+use App\Models\Post;
 
 final class PostsShowController extends Controller
 {

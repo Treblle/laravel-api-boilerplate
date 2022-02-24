@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Api\Posts;
 
-use App\Enums\Version;
-use App\Http\Requests\Api\v1_0\PostStoreRequest;
-use App\Http\Resources\v1_0\PostResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use App\Enums\Version;
+use App\Http\Requests\Api\v1_0\PostStoreRequest;
+use App\Http\Resources\v1_0\PostResource;
 
 final class PostsStoreController extends Controller
 {

@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Api\Posts;
 
-use App\Enums\Version;
-use App\Models\Post;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Http\{Request, JsonResponse};
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use App\Enums\Version;
+use App\Models\Post;
 
 final class PostsDestroyController extends Controller
 {

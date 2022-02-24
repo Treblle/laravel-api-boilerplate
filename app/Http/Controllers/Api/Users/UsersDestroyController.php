@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Api\Users;
 
-use App\Enums\Version;
-use App\Models\User;
-use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Http\{JsonResponse, Request};
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use App\Enums\Version;
+use App\Models\User;
 
 final class UsersDestroyController extends Controller
 {

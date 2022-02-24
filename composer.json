@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
+    "name": "Treblle/laravel-api-boilerplate",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Kick-start you next Laravel based API with this awesome boilerplate",
+    "keywords": ["api", "boilerplate", "template", "laravel"],
     "license": "MIT",
     "require": {
         "php": "^8.1",

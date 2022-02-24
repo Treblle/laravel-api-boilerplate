@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers\Api\Posts;
 
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Routing\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use App\Enums\Version;
 use App\Http\Requests\Api\v1_0\PostUpdateRequest;
 use App\Http\Resources\v1_0\PostResource;
 use App\Models\Post;
-use Illuminate\Http\Resources\Json\JsonResource;
-use Illuminate\Routing\Controller;
-use Symfony\Component\HttpFoundation\Response;
 
 final class PostsUpdateController extends Controller
 {

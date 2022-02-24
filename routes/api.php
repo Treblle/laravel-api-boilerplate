@@ -2,15 +2,8 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\Api\Posts\PostsDestroyController;
-use App\Http\Controllers\Api\Posts\PostsIndexController;
-use App\Http\Controllers\Api\Posts\PostsShowController;
-use App\Http\Controllers\Api\Posts\PostsStoreController;
-use App\Http\Controllers\Api\Posts\PostsUpdateController;
-use App\Http\Controllers\Api\Users\UsersDestroyController;
-use App\Http\Controllers\Api\Users\UsersIndexController;
-use App\Http\Controllers\Api\Users\UsersShowController;
-use App\Http\Controllers\Api\Users\UsersUpdateController;
+use App\Http\Controllers\Api\Posts\{PostsDestroyController, PostsIndexController, PostsShowController, PostsStoreController, PostsUpdateController};
+use App\Http\Controllers\Api\Users\{UsersDestroyController, UsersIndexController, UsersShowController, UsersUpdateController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=2628000;etag', 'treblle'])->group(function () {
+Route::middleware(['auth:sanctum', 'cache.headers:public;max_age=60;etag', 'treblle'])->group(function () {
     Route::prefix('users')->group(function () {
         Route::get('/', UsersIndexController::class)->name('users.index');
         Route::get('/{user}', UsersShowController::class)->name('users.show');
