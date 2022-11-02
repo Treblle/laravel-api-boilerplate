@@ -7,28 +7,28 @@ An awesome boilerplate for your next Laravel 9 based API. It's only goal is to s
 ## Features 🍭
 
 ### REST API Best Practices
-We baked in all the best REST API practices in terms of structuring your API, naming conversations, HTTP methods, responses and optimizations
+We baked in all the best REST API practices in terms of structuring your API, naming conventions, HTTP methods, responses, and optimizations.
 	
 ### Concrete examples
-We all like to learn by examples and that's why  the boilerplate comes with a concrete example that include everything from folder structure, routes to naming controllers
+We all like to learn by examples and that's why  the boilerplate comes with a concrete example that include everything from folder structure, routes to naming controllers.
 
 ### Scaffolding Artisan command
-Tired of manually creating controllers, resources, test and form requests each time for new API endpoints. We were too. That's why we added a command that does all of that for you. Just run `php artisan treblle:make` and you get everything you need in a second</dd>
+Tired of manually creating controllers, resources, test and form requests each time for new API endpoints? We were too. That's why we added a command that does all of that for you. Just run `php artisan treblle:make` and you get everything you need in a second.</dd>
 
 ### Built-in versioning
-Building a versioning system that scales is always hard and that's why we built in a robust versioning system that is easy to use and can grow with the project</dd>
+Building a versioning system that scales is always hard and that's why we built in a robust versioning system that is easy to use and can grow with the project.</dd>
 
 ### Single responsibility controllers
-The boilerplate uses single responsibility controllers that make it painfully obvious what's going on and can be used with different versions
+The boilerplate uses single responsibility controllers that make it painfully obvious what's going on and can be used with different versions.
 
 ### Models, migrations and factories
-We built two tables Users and Posts and defined everything you might need on a database and model level
+We built two tables Users and Posts and defined everything you might need on a database and model level.
 
 ### Sanctum authentication
 Built in Laravel Sanctum authentication included in the boilerplate.
 
 ### Magical UUID trait
-Want to use UUIDs but find it to much work just use our built in `InteractsWithUuid` trait and have fun with UUIDs
+Want to use UUIDs but find it to much work just use our built in `InteractsWithUuid` trait and have fun with UUIDs.
 
 ### Spawn a new user quickly
 Easily create a new user without messing around with database clients or CRUD systems by using our custom command `php artisan user:create`
